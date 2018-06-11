@@ -37,7 +37,7 @@ public class JPAExample {
         System.out.println("Ödön saved.");
 
         Address address2 = new Address("Hungary", "6789", "Budapest", "Harap u. 3.");
-        Student student2 = new Student("Aladár", "ktyfl@gmail.com", birthDate2, address);
+        Student student2 = new Student("Aladár", "ktyfl@gmail.com", birthDate2, address2);
         classBp2.addStudent(student2);
 
         transaction.begin();

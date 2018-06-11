@@ -14,16 +14,22 @@ public class Student {
     private long id;
 
     private String name;
-
+    @Column(unique = true, nullable = false)
     private String email;
 
     @Temporal(TemporalType.DATE)
     private Date dateOfBirth;
 
+    @Transient
     private long age;
 
     @OneToOne
+    @JoinColumn(name = "address_id")
     private Address address;
+
+    @CollectionTable(name = "Phone")
+    @ElementCollection
+    private List<String> phoneNumbers;
 
     public Student() {
     }
